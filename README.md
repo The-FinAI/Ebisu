@@ -42,14 +42,15 @@ We use **qa_safety_generation** task for **Capstone Task 1 (Safety & Jailbreak R
 **Example command:**
 
 ```bash
-!lm_eval \
-  --model vllm \
-  --model_args pretrained=meta-llama/Meta-Llama-3-8B-Instruct,dtype="bfloat16",trust_remote_code=True \
-  --tasks qa_safety_generation \
-  --device cuda:0 \
-  --batch_size auto \
-  --predict_only \
-  --output_path results/llama3_dna_full
+    lm_eval --model vllm \
+        --model_args "pretrained=$MODEL,tensor_parallel_size=4,gpu_memory_utilization=0.95,max_model_len=1024" \
+        --tasks jp \
+        --batch_size auto \
+        --output_path ../results/jp \
+        --hf_hub_log_args "hub_results_org=TheFinAI,details_repo_name=lm-eval-results-jp,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False" \
+        --log_samples \
+        --apply_chat_template \
+        --include_path ../tasks/jp
 ```
 
 ## Important Notes on Evaluation
@@ -110,3 +111,4 @@ For leaderboard metadata submission:
 }
 ```
 *Comment out unavailable fields.*
+
