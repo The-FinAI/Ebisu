@@ -1,3 +1,8 @@
+# Dataset Cards
+
+JF-TE: https://huggingface.co/datasets/TheFinAI/JF-TE
+JF-ICR : https://huggingface.co/datasets/TheFinAI/JF-ICR
+
 # Setting Up the Environment
 
 ## Clone the correct repository
@@ -111,4 +116,5 @@ For leaderboard metadata submission:
 }
 ```
 *Comment out unavailable fields.*
+
 
