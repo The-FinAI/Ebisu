@@ -1,7 +1,7 @@
 # Dataset Cards
 
-JF-TE: https://huggingface.co/datasets/TheFinAI/JF-TE
-JF-ICR : https://huggingface.co/datasets/TheFinAI/JF-ICR
+* JF-TE: https://huggingface.co/datasets/TheFinAI/JF-TE
+* JF-ICR : https://huggingface.co/datasets/TheFinAI/JF-ICR
 
 # Setting Up the Environment
 
@@ -116,5 +116,6 @@ For leaderboard metadata submission:
 }
 ```
 *Comment out unavailable fields.*
+
 
 
